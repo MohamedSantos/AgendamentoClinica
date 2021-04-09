@@ -1,0 +1,15 @@
+<h4>Consultas</h4>
+<hr>
+<form action="/searchresult" method="get">
+    <input type="search" name="search" id="search" placeholder="CPF ou EMAIL">
+    <button>Pesquisar</button>
+</form>
+<% appos.forEach (appo =>{ %>
+    <h4>Tipo de consulta: <%= appo.description %></h4>
+    <h4>Paciente: <%= appo.name %></h4>
+    <h4>Email: <%= appo.email %></h4>
+    <h4>CPF: <%= appo.cpf %></h4>
+    <h4>Data marcada: <%= appo.date%> às <%= appo.time%></h4>
+    <hr>
+
+<% }) %>
